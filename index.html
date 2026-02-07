@@ -5,6 +5,9 @@
 <title>Bar La Nave</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Restaurant Guru badge -->
+<link href="https://awards.infcdn.net/2024/circle_v2.css" rel="stylesheet"/>
+
 <style>
 body{
   font-family: Arial, sans-serif;
@@ -18,23 +21,29 @@ header{
   background:linear-gradient(135deg,#4CAF50,#2e7d32);
   color:white;
   text-align:center;
-  padding:35px 20px;
+  padding:40px 20px;
+  position:relative;
 }
 
-/* LOGO REDONDO PERFECTO */
 header img{
-  width:180px;
-  height:180px;
+  width:170px;
+  height:170px;
   object-fit:cover;
   border-radius:50%;
   border:6px solid white;
   background:white;
   box-shadow:0 6px 18px rgba(0,0,0,.25);
-  margin-bottom:12px;
 }
 
+header a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* ===== SECCIONES ===== */
 section{
-  max-width:900px;
+  max-width:1100px;
   margin:30px auto;
   padding:25px;
   background:white;
@@ -42,24 +51,68 @@ section{
   box-shadow:0 6px 14px rgba(0,0,0,.08);
 }
 
-h2{
-  border-bottom:2px solid #4CAF50;
-  padding-bottom:5px;
-  margin-top:40px;
-  color:#2e7d32;
+/* ===== COLUMNAS RESTAURANTE ===== */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 
+h2{
+  color:#2e7d32;
+  border-bottom:2px solid #4CAF50;
+  padding-bottom:5px;
+}
+
+/* ===== ITEMS ===== */
 .item{
   display:flex;
   justify-content:space-between;
-  margin:6px 0;
+  margin:5px 0;
 }
 
+/* ===== MENÚ DIA DESTACADO ===== */
 .menu-dia{
   background:#e8f5e9;
-  padding:15px;
-  border-radius:8px;
-  margin-top:15px;
+  padding:20px;
+  border-radius:12px;
+  border:2px solid #4CAF50;
+  margin-bottom:35px;
+}
+
+/* ===== FOTOS ===== */
+.galeria{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  margin:25px 0;
+}
+
+.galeria img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 20px;
+  border-radius:40px;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 5px 12px rgba(0,0,0,.3);
+}
+
+/* ===== QR ===== */
+.qr{
+  text-align:center;
+  margin-top:30px;
 }
 
 footer{
@@ -74,100 +127,93 @@ footer{
 
 <body>
 
-<header>
-  <!-- USAMOS EXACTAMENTE TU ARCHIVO -->
-  <img src="logo.jpg.png" alt="Logo Bar La Nave">
+<!-- ===== WHATSAPP ===== -->
+<a class="whatsapp" 
+   href="https://wa.me/34600000000?text=Hola,%20quiero%20reservar%20mesa%20en%20La%20Nave" 
+   target="_blank">
+📲 Reservar mesa
+</a>
 
-  <h1>Bar La Nave</h1>
-  <p>Camí del Fus, 62 · Massanassa (Valencia)</p>
+<header>
+
+<img src="logo.jpg.png" alt="Logo Bar La Nave">
+
+<h1>Bar – Restaurante La Nave</h1>
+
+<p>
+📍 
+<a href="https://www.google.es/maps/place/%F0%9F%8D%80BAR-Rte.+LA+NAVE/@39.4090432,-0.3869404,17z" target="_blank">
+Camí del Fus, 62 · Massanassa (Valencia)
+</a>
+</p>
+
+<!-- Badge Restaurant Guru -->
+<div id="circle-r-ribbon"
+onclick="if(event.target.nodeName.toLowerCase() != 'a'){window.open(this.querySelector('.r-ribbon_title').href);return 0;}">
+<p class="r-ribbon_year">2025</p>
+<a href="https://es.restaurantguru.com/Bar-La-Nave-Alfafar-Valencian-Community"
+class="r-ribbon_title" target="_blank">Bar La Nave</a>
+</div>
+
 </header>
 
 <section>
 
-<h2>☕ Cafés</h2>
-<div class="item"><span>Infusión</span><span>1,20 €</span></div>
-<div class="item"><span>Café solo</span><span>1,20 €</span></div>
-<div class="item"><span>Cortado</span><span>1,40 €</span></div>
-<div class="item"><span>Bombón</span><span>1,50 €</span></div>
-<div class="item"><span>Café con leche</span><span>1,60 €</span></div>
-<div class="item"><span>Carajillo</span><span>1,80 €</span></div>
-<div class="item"><span>Cremaet</span><span>2,00 €</span></div>
-<div class="item"><span>Bomba La Nave</span><span>2,40 €</span></div>
-<div class="item"><span>Capuchino</span><span>2,50 €</span></div>
-<div class="item"><span>+ Licor</span><span>0,20 €</span></div>
-<div class="item"><span>+ Hielo</span><span>0,10 €</span></div>
-
-<h2>🥐 Tostadas y pasteles</h2>
-<div class="item"><span>Valencianas</span><span>1,20 €</span></div>
-<div class="item"><span>Croissant</span><span>1,50 €</span></div>
-<div class="item"><span>Napolitana de chocolate</span><span>2,20 €</span></div>
-<div class="item"><span>1/2 tostada (aceite, mantequilla o tomate)</span><span>0,90 €</span></div>
-<div class="item"><span>Tostada (aceite, mantequilla o tomate)</span><span>1,40 €</span></div>
-<div class="item"><span>Tostada tomate con atún y olivas</span><span>3,00 €</span></div>
-<div class="item"><span>Tostada jamón york y queso</span><span>3,00 €</span></div>
-<div class="item"><span>Tostada tomate con jamón serrano</span><span>3,00 €</span></div>
-<div class="item"><span>Tostada francesa de queso, tomate y orégano</span><span>3,80 €</span></div>
-<div class="item"><span>Tostada tomate, queso fresco y anchoas</span><span>3,80 €</span></div>
-
-<h2>🥤 Refrescos</h2>
-<div class="item"><span>Coca-Cola</span><span>2,20 €</span></div>
-<div class="item"><span>Nestea</span><span>2,20 €</span></div>
-<div class="item"><span>Aquarius limón / naranja</span><span>2,20 €</span></div>
-<div class="item"><span>Agua con gas</span><span>1,60 €</span></div>
-<div class="item"><span>Bitter Kas</span><span>1,80 €</span></div>
-<div class="item"><span>Tinto de verano</span><span>2,20 €</span></div>
-<div class="item"><span>Tónica</span><span>1,80 €</span></div>
-<div class="item"><span>Palometa</span><span>2,00 €</span></div>
-<div class="item"><span>Agua pequeña</span><span>1,20 €</span></div>
-<div class="item"><span>Agua grande</span><span>1,50 €</span></div>
-
-<h2>🍺 Cervezas</h2>
-<div class="item"><span>Quinto / caña Amstel</span><span>1,50 €</span></div>
-<div class="item"><span>Tercio / doble Amstel</span><span>2,00 €</span></div>
-<div class="item"><span>Tanque</span><span>3,50 €</span></div>
-<div class="item"><span>1/3 Estrella Galicia</span><span>2,20 €</span></div>
-<div class="item"><span>Alhambra Reserva</span><span>3,50 €</span></div>
-
-<h2>🍽️ Almuerzos</h2>
-<div class="item"><span>Almuerzo con café</span><span>7,00 €</span></div>
-<div class="item"><span>Almuerzo sin café</span><span>6,50 €</span></div>
-
-<h2>🥗 Ensaladas</h2>
-<div class="item"><span>Ensaladilla rusa</span><span>9,00 €</span></div>
-<div class="item"><span>Ensalada valenciana</span><span>9,50 €</span></div>
-<div class="item"><span>Ensalada de queso de cabra</span><span>11,00 €</span></div>
-<div class="item"><span>Endivias, gulas, salmón y roquefort</span><span>11,00 €</span></div>
-<div class="item"><span>Ensalada César</span><span>11,50 €</span></div>
-<div class="item"><span>Ensalada Caprese</span><span>12,50 €</span></div>
-
-<h2>🍤 Tapas</h2>
-<div class="item"><span>Anchoas</span><span>6,00 €</span></div>
-<div class="item"><span>Boquerones</span><span>6,00 €</span></div>
-<div class="item"><span>Esgarraet</span><span>6,50 €</span></div>
-<div class="item"><span>Patatas fritas</span><span>5,00 €</span></div>
-<div class="item"><span>Bravas</span><span>6,50 €</span></div>
-<div class="item"><span>Huevos rotos con jamón</span><span>7,50 €</span></div>
-<div class="item"><span>Berenjenas con miel</span><span>7,50 €</span></div>
-<div class="item"><span>Morro</span><span>7,50 €</span></div>
-<div class="item"><span>Croquetas (4 uds)</span><span>8,00 €</span></div>
-<div class="item"><span>Puntilla rebozada</span><span>8,50 €</span></div>
-<div class="item"><span>Magro con tomate</span><span>8,50 €</span></div>
-<div class="item"><span>Calamares</span><span>8,50 €</span></div>
-<div class="item"><span>Gambas al ajillo</span><span>9,00 €</span></div>
-<div class="item"><span>Queso frito con mermelada</span><span>8,50 €</span></div>
-
+<!-- ===== MENU DEL DIA ===== -->
 <h2>📋 Menú del día</h2>
 <div class="menu-dia">
-<p><strong>Precio:</strong> 13,00 € (incluye bebida, postre y café)</p>
+<p><strong>Primeros:</strong> Ensalada de queso · Consomé · Paella marisco · Paella valenciana</p>
+<p><strong>Segundos:</strong> Secreto · Lomo ternera · Salmón eneldo</p>
+<p><strong>13€ incluye bebida + postre + café</strong></p>
 </div>
 
+<!-- ===== FOTOS DE PLATOS ===== -->
+<div class="galeria">
+<img src="https://images.unsplash.com/photo-1604908177522-432c9b03d9a8">
+<img src="https://images.unsplash.com/photo-1559847844-5315695dadae">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+</div>
+
+
+<!-- ===== CARTA EN COLUMNAS ===== -->
+<div class="grid">
+
+<div>
+<h2>☕ Cafés</h2>
+<div class="item"><span>Café solo</span><span>1,20 €</span></div>
+<div class="item"><span>Cortado</span><span>1,40 €</span></div>
+<div class="item"><span>Café con leche</span><span>1,60 €</span></div>
+</div>
+
+<div>
+<h2>🥤 Refrescos</h2>
+<div class="item"><span>Coca-Cola</span><span>2,20 €</span></div>
+<div class="item"><span>Aquarius</span><span>2,20 €</span></div>
+<div class="item"><span>Agua</span><span>1,20 €</span></div>
+</div>
+
+<div>
+<h2>🍺 Cervezas</h2>
+<div class="item"><span>Caña</span><span>1,50 €</span></div>
+<div class="item"><span>Tercio</span><span>2,00 €</span></div>
+<div class="item"><span>Alhambra Reserva</span><span>3,50 €</span></div>
+</div>
+
+<div>
 <h2>🍰 Postres</h2>
-<div class="item"><span>Fruta de temporada</span><span>2,80 €</span></div>
-<div class="item"><span>Cuajada con miel</span><span>3,00 €</span></div>
-<div class="item"><span>Flan de huevo</span><span>3,50 €</span></div>
-<div class="item"><span>Puding</span><span>3,50 €</span></div>
-<div class="item"><span>Contesa helada</span><span>2,80 €</span></div>
-<div class="item"><span>Tarta helada de whisky</span><span>3,00 €</span></div>
+<div class="item"><span>Flan</span><span>3,50 €</span></div>
+<div class="item"><span>Pudin</span><span>3,50 €</span></div>
+<div class="item"><span>Tarta whisky</span><span>3,00 €</span></div>
+</div>
+
+</div>
+
+<!-- ===== QR CARTA ===== -->
+<div class="qr">
+<h2>📱 Escanea la carta</h2>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://tusitio.com" alt="QR Carta">
+</div>
 
 </section>
 
