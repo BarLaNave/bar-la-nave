@@ -43,9 +43,15 @@ header a{
   font-weight:bold;
 }
 
-/* Badge recomendado lateral */
+/* Badge recomendado */
 .b-circledLeaves27--light {
   font-size:0.9em;
+}
+
+#badge-wrapper{
+  position:absolute;
+  top:20px;
+  right:20px;
 }
 
 /* ===== SECCIONES ===== */
@@ -106,6 +112,14 @@ footer{
   padding:15px;
   margin-top:40px;
 }
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 600px){
+  #badge-wrapper{
+    position:static;
+    margin-top:15px;
+  }
+}
 </style>
 </head>
 
@@ -122,15 +136,8 @@ footer{
   <!-- Logo grande centrado -->
   <img src="logo.jpg.png" alt="Logo Bar La Nave">
 
-  <h1>Bar – Restaurante La Nave</h1>
-
-  <p>
-  📍 <a href="https://www.google.es/maps/place/Bar-Rte.+LA+NAVE/@39.4090432,-0.3869404,17z" 
-        target="_blank">Camí del Fus, 62 · Massanassa (Valencia)</a>
-  </p>
-
-  <!-- Badge recomendado lateral superior derecho -->
-  <div style="position:absolute; top:20px; right:20px;">
+  <!-- Badge recomendado -->
+  <div id="badge-wrapper">
     <a id="b-circledLeaves27" target="_blank"
        href="https://es.restaurantguru.com/Bar-La-Nave-Alfafar-Valencian-Community"
        class="b-circledLeaves27--light b-circledLeaves27--2025">
@@ -139,6 +146,13 @@ footer{
       <span class="b-circledLeaves27__name">Bar La Nave</span>
     </a>
   </div>
+
+  <h1>Bar – Restaurante La Nave</h1>
+
+  <p>
+  📍 <a href="https://www.google.es/maps/place/Bar-Rte.+LA+NAVE/@39.4090432,-0.3869404,17z" 
+        target="_blank">Camí del Fus, 62 · Massanassa (Valencia)</a>
+  </p>
 </header>
 
 <section>
